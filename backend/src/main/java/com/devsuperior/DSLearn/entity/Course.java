@@ -2,6 +2,8 @@ package com.devsuperior.DSLearn.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -16,6 +18,9 @@ public class Course implements Serializable {
     private String name;
     private String imgUri;
     private String imgGrayUri;
+
+    @OneToMany(mappedBy = "course")
+    private List<Offer> offerList = new ArrayList<>();
 
     public Course(Long id, String name, String imgUri, String imgGrayUri) {
         this.id = id;
@@ -57,6 +62,11 @@ public class Course implements Serializable {
 
     public void setImgGrayUri(String imgGrayUri) {
         this.imgGrayUri = imgGrayUri;
+    }
+
+    @OneToMany
+    public List<Offer> getOfferList() {
+        return offerList;
     }
 
     @Override
