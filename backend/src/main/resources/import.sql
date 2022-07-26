@@ -17,3 +17,7 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Bootcamp HTML', 'ht
 
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2021-07-26T00:00:00Z', TIMESTAMP WITH TIME ZONE '2022-07-26T00:00:00Z', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2021-07-31T00:00:00Z', TIMESTAMP WITH TIME ZONE '2022-12-31T00:00:00Z', 1);
+
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Fórum', 'Tire aqui suas dúvidas', 2, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 2, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, external_link, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 0, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1);
