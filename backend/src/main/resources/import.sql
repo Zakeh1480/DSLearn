@@ -25,3 +25,6 @@ INSERT INTO tb_resource (title, description, position, img_uri, type, external_l
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 1', 'Nesse capítulo vamos começar o desenvolvimento', 1, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1, null);
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 2', 'Nesse capítulo vamos dar continuidade no desenvolvimento 1', 2, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1, 1);
 INSERT INTO tb_section (title, description, position, img_uri, resource_id, prerequisite_id) VALUES ('Capítulo 3', 'Nesse capítulo vamos dar continuidade no desenvolvimento 2', 3, 'https://www.kindpng.com/picc/m/463-4634183_courses-icon-black-and-white-png-download-transparent.png', 1, 2);
+
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2021-07-26T00:00:00Z', null, true, false);
+INSERT INTO tb_enrollment (user_id, offer_id, enroll_moment, refund_moment, available, only_update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2021-07-26T00:00:00Z', null, true, false);
