@@ -26,9 +26,6 @@ public class Section implements Serializable {
     @JoinColumn(name = "prerequisite_id")
     private Section sections;
 
-    @OneToMany(mappedBy = "section")
-    private Lesson lessons;
-
     public Section() {
 
     }
