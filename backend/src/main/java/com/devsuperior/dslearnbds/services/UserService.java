@@ -21,6 +21,9 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private AuthService authService;
+
     //Classe Logger serve parar dar alertas
     //logger serve para dar alertar na aplicação após iniciar.
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
@@ -29,7 +32,10 @@ public class UserService implements UserDetailsService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Transactional
-    public UserDTO findById(Long id){
+    public UserDTO findById(Long id) {
+        //A exception do método encerra o método findById, impedindo de continuar caso o usuário não seja ADMIN
+        //Ou ele mesmo.
+        authService.validateSelfOrAdmin(id);
         Optional<User> objUser = userRepository.findById(id);
         User user = objUser.orElseThrow(() -> new UsernameNotFoundException("User not found"));
         return new UserDTO(user);

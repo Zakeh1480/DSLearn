@@ -107,6 +107,15 @@ public class User implements UserDetails, Serializable {
         return result;
     }
 
+    public Boolean hasRole(String roleName) {
+        for (Role role : roles) {
+            if (role.getAuthority().equals(roleName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
